@@ -10,7 +10,7 @@ class BinarySearchTree {
         if(this.key == null){
             this.key = key;
             this.value = value;
-        } else if (key < this.key) {
+        } else if (key <= this.key) {
             if (this.left == null) {
                 this.left = new BinarySearchTree(key, value, this);
             } else {
@@ -88,15 +88,27 @@ class BinarySearchTree {
 
 function main(){
     const BST = new BinarySearchTree();
-    BST.insert(3);
-    BST.insert(1);
-    BST.insert(4);
-    BST.insert(6);
-    BST.insert(9);
-    BST.insert(2);
-    BST.insert(5);
-    BST.insert(7);
-    console.log(BST)
+    // BST.insert(3);
+    // BST.insert(1);
+    // BST.insert(4);
+    // BST.insert(6);
+    // BST.insert(9);
+    // BST.insert(2);
+    // BST.insert(5);
+    // BST.insert(7);
+    BST.insert('E', 'E');
+    BST.insert('A', 'A');
+    BST.insert('S');
+    BST.insert('Y');
+    BST.insert('Q');
+    BST.insert('U');
+    BST.insert('E');
+    BST.insert('S');
+    BST.insert('T');
+    BST.insert('I');
+    BST.insert('O');
+    BST.insert('N');
+    console.log(BST.left)
 }
 
 main();
